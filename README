@@ -1,27 +1,19 @@
-validates_area_code
-===================
-This plugin extends ActiveRecord::Validations to include a telephone area code validation.
-It uses the data provided by the North American Numbering Plan Administration (NANPA) for its validation.
+= validates_area_code
 
-Additional Options
-==================
-The additional options and arguments (:if, :message) are the same provided by the default ActiveRecord's validations.
+This plugin extends ActiveRecord::Validations to include a telephone area code validation. It uses the data provided by the North American Numbering Plan Administration (NANPA) for its validation.
 
-Current Release
-===============
-Version: 0.1
-Date: 10/23/2007
+== Example
 
-Example
-=======
-class User < ActiveRecord::Base
-  validates_area_code :phone, :allow_toll_free => false, :format => {:with => /\d{3}-\d{3}-\d{4}/, :message => 'is invalid. Should be XXX-XXX-XXXX'}
-end
+  class User < ActiveRecord::Base
 
-Author
-======
-Thiago Jackiw:: tjackiw at gmail dot com
+    validates_area_code :phone, :allow_toll_free => false, :format => {:with => /\d{3}-\d{3}-\d{4}/, :message => 'is invalid. Should be XXX-XXX-XXXX'}
 
-License
-=======
-Released under the MIT license.
+  end
+
+== Author
+
+* Thiago Jackiw
+
+== License
+
+Copyright (c) 2008 Thiago Jackiw. Released under the MIT license.
