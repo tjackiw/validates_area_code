@@ -1,0 +1,27 @@
+validates_area_code
+===================
+This plugin extends ActiveRecord::Validations to include a telephone area code validation.
+It uses the data provided by the North American Numbering Plan Administration (NANPA) for its validation.
+
+Additional Options
+==================
+The additional options and arguments (:if, :message) are the same provided by the default ActiveRecord's validations.
+
+Current Release
+===============
+Version: 0.1
+Date: 10/23/2007
+
+Example
+=======
+class User < ActiveRecord::Base
+  validates_area_code :phone
+end
+
+Author
+======
+Thiago Jackiw:: tjackiw at gmail dot com
+
+License
+=======
+Released under the MIT license.
